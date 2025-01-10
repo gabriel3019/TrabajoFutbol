@@ -1,0 +1,21 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.bg-primary {
+    background-color: #1c1c1c !important;
+}
+
+.bg-dark {
+    background-color: #0d0d0d !important;
+}
+
+.table {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.table thead th {
+    background-color: #333;
+}
