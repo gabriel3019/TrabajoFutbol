@@ -8,6 +8,80 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/index.css">
+    <style>
+        /* Ajustes para que ocupe toda la página */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        header {
+            height: 100px;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+        }
+
+        /* Evitar espacio extra en el contenido */
+        main {
+            padding-top: 0;
+        }
+
+        footer {
+            height: 50px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+/* Ajuste del tamaño de las imágenes del carrusel */
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Ajusta la altura que prefieras */
+    object-fit: contain;
+}
+
+
+        /* Aseguramos que los textos no se solapen */
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agregamos sombra al texto para que se vea mejor sobre la imagen */
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 120px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-item img {
+                height: 100px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -21,8 +95,8 @@
         </div>
     </header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navbar Fija debajo del header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -42,6 +116,50 @@
         </div>
     </nav>
 
+    <!-- Carrusel de imágenes con el logo y personas jugando al fútbol -->
+    <section id="carrusel-imagenes" class="mt-4">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/Logo_Futbol.png" class="d-block w-100" alt="Logo Football Hub">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Football Hub</h5>
+                        <p>El mejor lugar para seguir el fútbol.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/jugando_futbol.jpg" class="d-block w-100" alt="Persona Jugando al Fútbol">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Juega al fútbol</h5>
+                        <p>Únete a la comunidad y disfruta del fútbol.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/Copas.jpg" class="d-block w-100" alt="Persona Jugando al Fútbol">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Vive el fútbol</h5>
+                        <p>Accede a los mejores partidos y noticias.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/celebracion.jpg" class="d-block w-100" alt="Celebración de Gol">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Vibra con cada gol</h5>
+                        <p>El fútbol es emoción, ¡vívelo con nosotros!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="container mt-4">
         <!-- Banner -->
@@ -50,6 +168,93 @@
             <p>Tu lugar favorito para todo sobre fútbol.</p>
             <button class="btn btn-warning btn-lg mt-3">Explorar</button>
         </section>
+
+        <!-- Ligas más vistas -->
+        <section id="ligas-mas-vistas" class="mt-5">
+            <h3 class="text-center">Ligas Más Vistas en el Mundo</h3>
+            <p class="text-center">Estas ligas son las más vistas a nivel mundial, con millones de seguidores en todo el planeta.</p>
+            <div id="ligasCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/la-liga.png" alt="La Liga" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/Premier_League_Logo.svg.png" alt="Premier League" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/serie-a.png" alt="Serie A" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/Bundesliga_logo_(2017).svg.png" alt="Bundesliga" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/Ligue1_Uber_Eats_logo.png" alt="Ligue 1" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#ligasCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#ligasCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Información de las ligas más vistas -->
+        <section id="informacion-ligas" class="mt-5">
+            <h3 class="text-center">Información sobre las Ligas Más Vistas</h3>
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th>Liga</th>
+                        <th>Fundación</th>
+                        <th>País</th>
+                        <th>Equipos</th>
+                        <th>Títulos Ganados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>La Liga</td>
+                        <td>1929</td>
+                        <td>España</td>
+                        <td>20</td>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <td>Premier League</td>
+                        <td>1992</td>
+                        <td>Inglaterra</td>
+                        <td>20</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Serie A</td>
+                        <td>1898</td>
+                        <td>Italia</td>
+                        <td>20</td>
+                        <td>36</td>
+                    </tr>
+                    <tr>
+                        <td>Bundesliga</td>
+                        <td>1963</td>
+                        <td>Alemania</td>
+                        <td>18</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>Ligue 1</td>
+                        <td>1932</td>
+                        <td>Francia</td>
+                        <td>20</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
     </main>
 
     <!-- Footer -->

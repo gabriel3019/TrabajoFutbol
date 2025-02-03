@@ -4,7 +4,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 header .container {
     display: flex;
     align-items: center;
@@ -18,7 +17,6 @@ header h1 {
     transform: translateX(-50%);
     margin: 0;
 }
-
 
 h1, h2 {
     font-weight: bold;
@@ -54,6 +52,13 @@ footer p {
     margin: 0;
 }
 
+/* Ajustes para las imágenes en el carrusel */
+.carousel-item img {
+    max-height: 150px; /* Tamaño más pequeño para las imágenes */
+    width: auto;
+    object-fit: contain; /* Mantiene la proporción de las imágenes */
+}
+
 /* Media Queries para dispositivos pequeños */
 @media (max-width: 768px) {
     header h1 {
@@ -72,6 +77,12 @@ footer p {
         margin: 1rem auto;
         width: 90%;
     }
+
+    .carousel-item img {
+        max-height: 150px !important;  /* Asegura que el max-height se aplique correctamente */
+        width: 100% !important;        /* Asegura que la imagen ocupe todo el ancho */
+        object-fit: contain !important; /* Mantiene la proporción de la imagen */
+    }
 }
 
 @media (max-width: 576px) {
@@ -86,5 +97,10 @@ footer p {
 
     footer {
         font-size: 0.9rem;
+    }
+
+    /* Ajuste en la imagen del carrusel para pantallas muy pequeñas */
+    .carousel-item img {
+        max-height: 100px; /* Ajusta aún más el tamaño en pantallas más pequeñas */
     }
 }
