@@ -70,53 +70,51 @@
         }
 
         .info-box {
-    background-color: #ffffff;
-    padding: 25px;
-    margin: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    flex: 1;
-    transition: all 0.3s ease-in-out;
-}
+            background-color: #ffffff;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+            flex: 1;
+            transition: all 0.3s ease-in-out;
+        }
 
-.info-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-.info-box h3 {
-    font-size: 1.5rem;
-    color: #343a40;
-    margin-bottom: 15px;
-}
+        .info-box h3, .info-box h4 {
+            font-size: 1.5rem;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
 
-.info-box p {
-    font-size: 1rem;
-    color: #6c757d;
-}
+        .info-box p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
 
-.info-box a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
+        .info-box a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
 
-.info-box a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
+        .info-box a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
 
-/* Estilo responsive para pantallas pequeñas */
-@media (max-width: 768px) {
-    .info-box {
-        padding: 20px;
-    }
-}
+        @media (max-width: 768px) {
+            .info-box {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
     <header class="bg-primary text-white py-2 d-flex align-items-center">
         <div class="container header-container">
             <img src="assets/img/Logo_Futbol.png" alt="My Football Hub Logo" class="logo">
@@ -124,7 +122,6 @@
         </div>
     </header>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -144,30 +141,34 @@
         </div>
     </nav>
 
-    <!-- Información de colaboración con AS -->
     <section class="info-section">
         <h2>Trabajamos junto con AS</h2>
         <p>Consulta la clasificación de cada liga del mundo, los próximos partidos y mucho más.</p>
         <div class="container leagues-container">
             <div class="info-box">
-                <h3>La Liga</h3>
-                <p><a href="https://as.com/futbol/primera/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/futbol/primera/calendario/" target="_blank">Próximos partidos</a> | <a href="https://as.com/futbol/primera/estadisticas/" target="_blank">Estadísticas</a></p>
+                <h3>España</h3>
+                <h4>La Liga</h4>
+                <p><a href="https://as.com/resultados/futbol/primera/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/resultados/futbol/primera/jornada/" target="_blank">Próximos partidos</a> | <a href="https://as.com/resultados/futbol/primera/ranking/" target="_blank">Estadísticas</a></p>
             </div>
             <div class="info-box">
-                <h3>Premier League</h3>
-                <p><a href="https://as.com/futbol/premier/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/futbol/premier/calendario/" target="_blank">Próximos partidos</a> | <a href="https://as.com/futbol/premier/estadisticas/" target="_blank">Estadísticas</a></p>
+                <h3>Inglaterra</h3>
+                <h4>Premier League</h4>
+                <p><a href="https://as.com/resultados/futbol/inglaterra/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/resultados/futbol/inglaterra/jornada/" target="_blank">Próximos partidos</a> | <a href="https://as.com/resultados/futbol/inglaterra/ranking/" target="_blank">Estadísticas</a></p>
             </div>
             <div class="info-box">
-                <h3>Serie A</h3>
-                <p><a href="https://as.com/futbol/serie_a/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/futbol/serie_a/calendario/" target="_blank">Próximos partidos</a> | <a href="https://as.com/futbol/serie_a/estadisticas/" target="_blank">Estadísticas</a></p>
+                <h3>Italia</h4>
+                <h4>Serie A</h3>
+                <p><a href="https://as.com/resultados/futbol/italia/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/resultados/futbol/italia/jornada/" target="_blank">Próximos partidos</a> | <a href="https://as.com/resultados/futbol/italia/ranking/" target="_blank">Estadísticas</a></p>
             </div>
             <div class="info-box">
-                <h3>Bundesliga</h3>
-                <p><a href="https://as.com/futbol/bundesliga/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/futbol/bundesliga/calendario/" target="_blank">Próximos partidos</a> | <a href="https://as.com/futbol/bundesliga/estadisticas/" target="_blank">Estadísticas</a></p>
+                <h3>Alemania</h3>
+                <h4>Bundesliga</h4>
+                <p><a href="https://as.com/resultados/futbol/alemania/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/resultados/futbol/alemania/jornada/" target="_blank">Próximos partidos</a> | <a href="https://as.com/resultados/futbol/alemania/ranking/" target="_blank">Estadísticas</a></p>
             </div>
             <div class="info-box">
-                <h3>Ligue 1</h3>
-                <p><a href="https://as.com/futbol/ligue_1/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/futbol/ligue_1/calendario/" target="_blank">Próximos partidos</a> | <a href="https://as.com/futbol/ligue_1/estadisticas/" target="_blank">Estadísticas</a></p>
+                <h3>Francia</h3>
+                <h4>Ligue 1</h4>
+                <p><a href="https://as.com/resultados/futbol/francia/clasificacion/" target="_blank">Clasificación</a> | <a href="https://as.com/resultados/futbol/francia/ranking/" target="_blank">Próximos partidos</a> | <a href="https://as.com/futbol/ligue_1/estadisticas/" target="_blank">Estadísticas</a></p>
             </div>
         </div>
     </section>
